@@ -40,4 +40,9 @@
   scan sqli in content providers
     run scanner.provider.injection -a application.package.name
     
+  scan path traversal vul in content providers
+    run scanner.provider.traversal -a application.package.name
+    
+ 6)Interact with broadcast receiver
+    run app.broadcast.send --action (action from android_manifest file)
   
