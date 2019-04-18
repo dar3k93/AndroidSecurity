@@ -24,7 +24,7 @@
 5)Identify the attack surface
   
   Attack surface
-    applpackage.attacksurface application.package.name
+    run app.package.attacksurface application.package.name
     
   exported activities
     run app.activity.info -a application.package.name
