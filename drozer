@@ -19,7 +19,7 @@
     run app.pacakage.info –a application.package.name
     
   inspect application manifest 
-    run.package.manifest application.package.name
+    run app.package.manifest application.package.name
   
 5)Identify the attack surface
   
