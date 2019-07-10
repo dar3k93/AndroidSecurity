@@ -1,0 +1,14 @@
+as root execute command: 
+-adb mount
+
+pickup a /system rekord and change ro to wr permission
+mount -o rw,remount /.../../../ /system
+
+Navigate to NDK directory and identify the ARM binary location. In my case, it is inside “prebuilt/android-arm” directory
+
+push gdbserver to /system/bin
+
+check your app pid number
+gdbserver :8888 --attach you_app_pid
+
+adb forward tcp:8888 tcp:8888
