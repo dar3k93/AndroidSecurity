@@ -33,9 +33,11 @@
     - run app.provider.info -a application.package.name
     
   #### fatch data from content providers
-    run scanner.provider.finduris -a application.package.name
-      to query result
-        run app.provider.query content://etc
+    - run scanner.provider.finduris -a application.package.name
+    
+         to query result
+    
+    - run app.provider.query content://etc
         
   ##### scan sqli in content providers
     - run scanner.provider.injection -a application.package.name
