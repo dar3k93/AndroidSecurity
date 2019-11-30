@@ -1,13 +1,18 @@
 #### Port forward:
   - adb forward tcp:31415 tcp:31415
-  
+ 
 #### Lunch drozer console:
   - drozer console connect
+
+#### List comands/modules
+  - list
+  
+#### Search for app
+  - run app.package.list -f <keyword>
   
 #### Command description
   -shell: start interactive Linux shell on the device, in the agent context.
   -module: find drozer module and install
-  -list: show drozer modules
   -run MODULE: execute drozer module
   
 #### Android app reconnaissance
@@ -31,8 +36,15 @@
     
   #### Content providers info
     - run app.provider.info -a application.package.name
-    
-  #### fatch data from content providers
+  ##### Find uri for providers
+    - run app.provider.finduri <package name>
+  ##### Get info from providers
+    - run app.provider.query <uri>
+  ##### Check path traverssal in provider 
+    - run scanner.provider.traversal -a <package name>
+  ##### Check for Sql injection
+    - run scanner.provider.injection -a <package name>
+  ##### fatch data from content providers
     - run scanner.provider.finduris -a application.package.name
     
          to query result
