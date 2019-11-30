@@ -36,27 +36,29 @@
     
   #### Content providers info
     - run app.provider.info -a application.package.name
-  ##### Find uri for providers
+  ###### Find uri for providers
     - run app.provider.finduri <package name>
-  ##### Get info from providers
+  ###### Get info from providers
     - run app.provider.query <uri>
-  ##### Check path traverssal in provider 
+  ###### Check path traverssal in provider 
     - run scanner.provider.traversal -a <package name>
-  ##### Check for Sql injection
+  ###### Check for Sq injection
     - run scanner.provider.injection -a <package name>
-  ##### fatch data from content providers
+  ###### fatch data from content providers
     - run scanner.provider.finduris -a application.package.name
-    
          to query result
-    
-    - run app.provider.query content://etc
-        
-  ##### scan sqli in content providers
-    - run scanner.provider.injection -a application.package.name
-    
-  ##### scan path traversal vul in content providers
-    - run scanner.provider.traversal -a application.package.name
-    
- #### Interact with broadcast receiver
-    - run app.broadcast.send --action (action from android_manifest file)
+    - run app.provider.query content://etce
+  #### Get info about broadcast receiver
+    - run app.broadcast.info -a <package name>
+    -
+  ###### Interact with broadcast receiver
+    - run app.broadcast.send --action <action from android_manifest file>
+    - run app.broadcast.send --action <action from android_manifest file> --component <package name> <broadcast reciever> --extra string<string to send like in sendind sms we can send phone number for that we need to check source for input parameter>
+ 
+ #### Get info about services
+    - run app.service.info -a <package name>
+ ###### Interact with services
+    - run app.service.send <package name> <service name> --msg <msg to service>
+  
+
   
