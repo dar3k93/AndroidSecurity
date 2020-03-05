@@ -1,8 +1,11 @@
 #### Get list of exported Broadcast Receivers, you can use drozer script.
 
-#### Broadcast: Component runs in the background without UI. For example Music playing service.
-#### Intent: Allows to interact with other android component.
-#### Exported: Attribute with says wether the service can be accessed by other application or not.
+#### Broadcast: 
+Component runs in the background without UI. For example Music playing service.
+#### Intent: 
+Allows to interact with other android component.
+#### Exported: 
+Attribute with says wether the service can be accessed by other application or not.
 
 ### Identify Broadcast Receiver is exported
 - Use **APKTOOL -d file.apk**
