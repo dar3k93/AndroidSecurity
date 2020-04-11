@@ -19,7 +19,13 @@ public static boolean a() {
     }
 
     public static boolean c() {
-        for (String file : new String[]{"/system/app/Superuser.apk", "/system/xbin/daemonsu", "/system/etc/init.d/99SuperSUDaemon", "/system/bin/.ext/.su", "/system/etc/.has_su_daemon", "/system/etc/.installed_su_daemon", "/dev/com.koushikdutta.superuser.daemon/"}) {
+        for (String file : new String[]{"/system/app/Superuser.apk", 
+                                        "/system/xbin/daemonsu", 
+                                        "/system/etc/init.d/99SuperSUDaemon", 
+                                        "/system/bin/.ext/.su", 
+                                        "/system/etc/.has_su_daemon", 
+                                        "/system/etc/.installed_su_daemon", 
+                                        "/dev/com.koushikdutta.superuser.daemon/"}) {
             if (new File(file).exists()) {
                 return true;
             }
