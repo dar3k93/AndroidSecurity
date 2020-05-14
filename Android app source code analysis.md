@@ -4,7 +4,7 @@
 - API calls
 - Decryption functions
 
-App entry points:
+#### App entry points:
 -
 -
 -
