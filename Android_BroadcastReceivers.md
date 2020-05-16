@@ -6,8 +6,11 @@
 - Exported: service can be accessed by other application or root
 
 #### Identify BroadcastReceiver is exported
+- When broadcast receiver is exported without any permission restriction, any application can send broadcast message to the exported receiver.
+
 - Use **APKTOOL -d file.apk**
-- Check the manifest file for receiver tag and exported attribute if it is True and if there is no other permission is set.
+
+- Check the manifest file for receiver tag and exported attribute.
 
 ```AndroidMainfest.xml
 <receiver android:name="TestBroadcastReceiver" android:exported="true">
@@ -18,13 +21,21 @@
 </receiver>
 ```
 #### Decompiled the apk file and check the source code
+- search for 
+    - BroadcastReceiver
+    - <receiver>
+    - onReceive
 
-#### Using adb
+#### Simple PoC
+- create app with intent
 ```
-am broadcast -a TestBroadcast -n com.my.test.app.test/.TestBroadcastReceiver
+Intent i = new Intent('my.broadcast.vuln.app');
+Some action with intent instance
+sendBroadcast(in)
 ```
-#### Drozer payload example:
-drozer> 'run app.broadcast.send --action <EXPORTED BROADCAST RECEIVER> 
-  --component <FULL PACKAGE NAME example: com.some.example.class>
-  ***if class accept some argument example "getSting"***
-  --extra <string parametr_name value>'
+
+#### usefull tools 
+- drozer
+- am
+  
+
