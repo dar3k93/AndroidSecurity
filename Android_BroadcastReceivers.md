@@ -23,7 +23,7 @@
 #### Decompiled the apk file and check the source code
 - search for 
     - BroadcastReceiver
-    - <receiver>
+    - receiver in manifest
     - onReceive
 
 #### Simple PoC
