@@ -1,5 +1,9 @@
 ## Dalvik's bytecode
 
+```
+JAVA -> DEX -> OAT -> ART -> ARM32/ARM64/x86
+```
+
 ### Primitives 
 - V : void can only be used for return types
 - B : byte
