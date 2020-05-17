@@ -11,7 +11,7 @@
 - D : double
 - Z : boolean
 
-##### Object
+### Object
 ```
 Lpackage/name/ObjectName; L indicates that it is an object type
 Ljava/lang/String; is equivalent to java.lang.String
@@ -30,3 +30,6 @@ Lpackage/name/ObjectName;->FieldName:Ljava/lang/String;
 ```
 - FieldName : Field name
 - Ljava/lang/String; : type of the field
+
+#### References
+- https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields
