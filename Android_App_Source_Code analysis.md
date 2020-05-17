@@ -12,6 +12,39 @@
 -
 
 #### Worth checking the words:
+- API calls
+  - ActivityManager
+  - PackageManager
+  - WifiManager
+  - QueryIntentActivites
+  - getRunningAppProcessoes
+  - SensorManager
+  - BluetoothAdapter
+  - Address
+  - LocationManager
+  - TelephonyManager
+  - AdvertisingIdClient
+
+- File
+  - file
+  - read
+  - write
+  - directory
+  - sdcard
+  - document
+
+- Net
+  - http
+  - https
+  - connect
+  - socket
+  - uri
+  - loadUrl
+  - post
+  - .com
+  - .net
+  - url
+  
 - API key
 - secret key
 - token/tokens
@@ -23,11 +56,6 @@
 - WebView
 - private
 - endpoint
-- http/https
 - content
 - javascript
-- url
 
-#### Smali
-- local registers: v0, v1, v2.....
-- method argument alias (p0 == this): p0, p1, p2..... 
