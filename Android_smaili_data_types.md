@@ -35,5 +35,10 @@ Lpackage/name/ObjectName;->FieldName:Ljava/lang/String;
 - v0, v1, v2 : local registers
 - p0, p1, p2 : method argument alias e.g (p0 == this)
 
+### Case study
+```
+//TO DO, ADD smali code
+```
+
 #### References
 - https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields
