@@ -31,5 +31,9 @@ Lpackage/name/ObjectName;->FieldName:Ljava/lang/String;
 - FieldName : Field name
 - Ljava/lang/String; : type of the field
 
+### Smali registers
+- v0, v1, v2 : local registers
+- p0, p1, p2 : method argument alias e.g (p0 == this)
+
 #### References
 - https://github.com/JesusFreke/smali/wiki/TypesMethodsAndFields
