@@ -58,4 +58,8 @@
 - endpoint
 - content
 - javascript
+- loadLibrary
+- native
+- install
+- addJavaScriotInterface
 
