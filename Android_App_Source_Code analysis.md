@@ -11,7 +11,7 @@
 -
 -
 
-#### Worth checking the words:
+#### Worth checking words:
 - API calls
   - ActivityManager
   - PackageManager
