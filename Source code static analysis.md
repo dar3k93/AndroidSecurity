@@ -1,6 +1,6 @@
 - [Key_word](#Key_Word)
   - [Application entry points](#Entry_points)
-   -[Wordlist](#Wordlist)
+  - [Wordlist](#Wordlist)
 - [Smali](#Smali)
 
 ## Key_word
