@@ -1,8 +1,8 @@
-- [Key word](#Key Word)
+- [Key_word](#Key_Word)
   - [Application entry points](#Entry points]
 - [Smali](#Smali)
 
-## Key word
+## Key_word
   
   ### Entry points
     -
