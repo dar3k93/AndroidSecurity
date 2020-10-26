@@ -58,6 +58,15 @@
        - native
        - install
        - addJavaScriotInterface
+     - Function
+       - getExternal
+       - getWriteableDatabase 
+       - getReadableDatabase 
+       - getCacheDir 
+       - getExternalCacheDirs
+     - Classes
+       - SharedPreferences 
+       - FileOutPutStream 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Smali
 
