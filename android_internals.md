@@ -1,3 +1,6 @@
+- [Manifest}(#Mainfest)
+  - [Debug Mode](#Debug)
+  - [Backup](#Backup)
 - [Broadcast Receiver](#BroadcastReceiver)
   - [Broadcast Receiver Discription](#Broadcast_receiver_description)
   - [Exported Broadcast Receiver](#Exported_broadcast_receiver)
@@ -10,6 +13,12 @@
   - [Exported Activity Bypassing](#Exported_activity_bypassing)
     - [Manifset](#Manifset)
 
+# Manifest
+
+## Debug
+
+## Backup
+------------------------------------------------------------------------------------------------------------------------
 # BroadcastReceiver
 
 ## Broadcast_receiver_description
