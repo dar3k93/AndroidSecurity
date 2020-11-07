@@ -17,7 +17,6 @@
     - [Intent AndroidManifest declaration](#Intent_AndroidManifest.xml)
     - [Intent method code implementation](#Intent_implementation)
     - [Create intent exploitation application](#Create_intent_exploitation_app)
-  - []()
 - [Content Provider](#Content_provider)
   - [Content Provider Discription](#Content_Provider_Discription)
   - [Exported Content Provider](#Exported_content_provider)
