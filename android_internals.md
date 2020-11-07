@@ -86,7 +86,7 @@ Content providers are used to share app data with other applications, which is n
 
 ## Exported_content_provider
 
-### CP_BR_AndroidManifest.xml
+### CP_AndroidManifest.xml
 ```
 provider android:name="com.android.insecurebankv2.TrackUserContentProvider" android:exported="true" android:authorities="com.android.insecurebankv2.TrackUserContentProvider"/>
 ```
