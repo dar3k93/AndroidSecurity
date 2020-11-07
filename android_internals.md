@@ -15,7 +15,7 @@
 - [Content Provider](#Content_provider)
   - [Content Provider Discription](#Content_Provider_Discription)
   - [Exported Content Provider](#Exported_content_provider)
-    - [Content Provider AndroidManifest declaration](#CP_BR_AndroidManifest.xml)
+    - [Content Provider AndroidManifest declaration](#CP_AndroidManifest.xml)
     - [Content Provider method code implementation](#CP_method_code)
     - [ADB Content Provider exploitation](#adb_CP_exploitaion)
 # Manifest
