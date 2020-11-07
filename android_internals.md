@@ -12,6 +12,12 @@
   - []()
   - [Exported Activity Bypassing](#Exported_activity_bypassing)
     - [Manifset](#Manifset)
+- [Intents](#Intents)
+  - [Intent Sniffing](#Intent_sniffing)
+    - [Intent AndroidManifest declaration](#Intent_AndroidManifest.xml)
+    - [Intent method code implementation](#Intent_implementation)
+    - [Create intent exploitation application](#Create_intent_exploitation_app)
+  - []()
 - [Content Provider](#Content_provider)
   - [Content Provider Discription](#Content_Provider_Discription)
   - [Exported Content Provider](#Exported_content_provider)
@@ -81,6 +87,39 @@ android:name="com.android.insecurebankv2.PostLogin" android:exported="true"/>
 
 Bypassing: adb shell am start -n com.android.insecurebankv2/com.android.insecurebankv2.PostLogin
 ```
+-------------------------------------------------------------------------------------------------------------------------------
+# Intents
+
+## Intent_sniffing
+
+### Intent_AndroidManifest.xml
+```
+<receiver android:name="com.android.insecurebankv2.MyBroadCastReceiver" android:exported="true">
+ <intent-filter>
+      <action android:name="theBroadcast"/>
+  </intent-filter>
+</receiver>
+```
+### Intent_implementation
+```
+public void onReceive(Context context, Intent intent) {
+        String phn = intent.getStringExtra("phonenumber");
+        String newpass = intent.getStringExtra("newpass");
+        if (phn != null) {
+
+private void broadcastChangepasswordSMS(String phoneNumber, String pass) {
+        if (TextUtils.isEmpty(phoneNumber.toString().trim())) {
+            System.out.println("Phone number Invalid.");
+            return;
+        }
+        Intent smsIntent = new Intent();
+        smsIntent.setAction("theBroadcast");
+        smsIntent.putExtra("phonenumber", phoneNumber);
+        smsIntent.putExtra("newpass", pass);
+        sendBroadcast(smsIntent);
+    }
+```
+### Create_intent_exploitation_app
 -------------------------------------------------------------------------------------------------------------------------------
 # Content_Provider
 
