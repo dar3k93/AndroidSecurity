@@ -18,6 +18,8 @@
     - [Content Provider AndroidManifest declaration](#CP_AndroidManifest.xml)
     - [Content Provider method code implementation](#CP_method_code)
     - [ADB Content Provider exploitation](#adb_CP_exploitaion)
+- [Insecure Logging](#Insecure_Logging)
+
 # Manifest
 
 ## Debug
@@ -99,3 +101,5 @@ static final String name = "name";
 ```
 content query --uri content://com.android.insecurebankv2.TrackUserContentProvider/trackerusers    
 ```
+-------------------------------------------------------------------------------------------------------------------------------
+# Insecure_Logging
