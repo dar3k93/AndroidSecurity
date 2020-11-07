@@ -1,6 +1,8 @@
 - [Manifest](#Mainfest)
   - [Debug Mode](#Debug)
   - [Backup](#Backup)
+  - [External Storage](#External_Storage)
+  - [Permissions](#Permissions)
 - [Broadcast Receiver](#BroadcastReceiver)
   - [Broadcast Receiver Discription](#Broadcast_receiver_description)
   - [Exported Broadcast Receiver](#Exported_broadcast_receiver)
