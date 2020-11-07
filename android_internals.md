@@ -1,4 +1,4 @@
-- [Manifest}(#Mainfest)
+- [Manifest](#Mainfest)
   - [Debug Mode](#Debug)
   - [Backup](#Backup)
 - [Broadcast Receiver](#BroadcastReceiver)
