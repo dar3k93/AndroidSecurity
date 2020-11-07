@@ -19,6 +19,7 @@
     - [Content Provider method code implementation](#CP_method_code)
     - [ADB Content Provider exploitation](#adb_CP_exploitaion)
 - [Insecure Logging](#Insecure_Logging)
+  - [logcat](#logcat)
 
 # Manifest
 
@@ -103,3 +104,8 @@ content query --uri content://com.android.insecurebankv2.TrackUserContentProvide
 ```
 -------------------------------------------------------------------------------------------------------------------------------
 # Insecure_Logging
+
+## logcat
+```
+adb logcat | grep "$(adb shell ps | grep [app.package.name]  | awk '{print $2}')"
+```
