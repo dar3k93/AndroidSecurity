@@ -1,6 +1,6 @@
 - [Manifest](#Mainfest)
   - [Debug Mode](#Debug)
-    [Java Debugger](#jdp)
+  - [Java Debugger](#jdp)
   - [Backup](#Backup)
   - [External Storage](#External_Storage)
   - [Permissions](#Permissions)
