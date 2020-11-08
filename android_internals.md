@@ -1,5 +1,6 @@
 - [Manifest](#Mainfest)
   - [Debug Mode](#Debug)
+    [Java Debugger](#jdp)
   - [Backup](#Backup)
   - [External Storage](#External_Storage)
   - [Permissions](#Permissions)
@@ -31,6 +32,12 @@
 # Manifest
 
 ## Debug
+If an Application is marked as debuggable then an attacker can access the application’s data by assuming the privileges of that application
+```
+  adb shell
+  run-as com.android.insecurebankv2 
+```
+### jdp
 
 ## Backup
 ------------------------------------------------------------------------------------------------------------------------
