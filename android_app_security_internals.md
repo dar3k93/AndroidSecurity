@@ -98,7 +98,19 @@ Bypassing: adb shell am start -n com.android.insecurebankv2/com.android.insecure
 -------------------------------------------------------------------------------------------------------------------------------
 # Intents
 
-## Intent_sniffing
+## Types of intent
+
+Explicity: have a set receiver and can only be delivered to a predefined component e.g:
+  - activity,
+  - service,
+  - receiver
+
+Implicity: Only certain parameters are set e.g:
+  - MIME type,
+  - Data
+and Android system decides which component to invoke.
+
+## Intent sniffing
 
 ### Intent_AndroidManifest.xml
 ```
