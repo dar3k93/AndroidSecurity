@@ -1,7 +1,10 @@
 - [Key_word](#Key_Word)
   - [Application entry points](#Entry_points)
   - [Wordlist](#Wordlist)
+  - [Quick grep](#Quick_grep)
+  
 - [Smali](#Smali)
+
 - [Root binaries](#Root)
 
 ## Key_word
@@ -67,6 +70,43 @@
      - Classes
        - SharedPreferences 
        - FileOutPutStream 
+       
+  ### Quick grep
+    - search for log methods
+    ```
+    grep -Ei 'Log.v' -Ei 'Log.d' -Ei 'Log.i' -Ei 'Log.w' -Ei 'Log.e' -Ei 'log' -Ei 'logger' -Ei 'printStackTrace' -Ei 'System.out.print' -Ei 'System.err.print' -R .
+    ```
+    
+    - search for config etc
+    ```
+    grep -Ei 'username' -Ei 'user' -Ei 'userid' -Ei 'password' -Ei '.config' -Ei 'secret' -Ei 'pass' -Ei 'passwd' -Ei 'token' -Ei 'login' -Ei 'auth' -R .
+    ```
+    
+    - search for endpoint
+    ```
+    grep -Ei 'api' -Ei ‘http’ -Ei 'https' -Ei 'URI' -Ei 'URL' -R .
+    ```
+    
+    - check sensitive in cache
+    ```
+    grep -Ei 'getCacheDir' -Ei 'getExternalCacheDirs' -R .
+    ```
+    
+    - check database pattern
+    ```
+    grep -Ei 'localUserSecretStore' -Ei 'getWriteableDatabase' -Ei 'getReadableDatabase' -Ei 'SQLiteDatabase' -Ei ‘realm' -Ei 'getDefaultInstance' -Ei 'beginTransaction' -Ei 'insert' -Ei 'query' -Ei 'delete' -Ei 'update' -R .
+    ```
+    
+    - check improper file permission
+    ```
+    grep -Ei 'MODE_WORLD_READABLE' -Ei 'MODE_WORLD_WRITEABLE' -R .
+    ```
+    
+    - check for keystore
+    ```
+    grep -Ei 'AndroidKeystore' -Ei 'KeyStore' -Ei 'crypto' -Ei 'cipher' -Ei 'store' -R .
+    ```
+  
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Smali
 
