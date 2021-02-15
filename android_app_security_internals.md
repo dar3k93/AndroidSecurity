@@ -1,5 +1,7 @@
 - [Manifest](#Mainfest)
 
+- [Certificate](#Certificate)
+
 - [Broadcast Receiver](#BroadcastReceiver)
 
 - [Activity](#Activity)
@@ -47,6 +49,11 @@ If android have flag android:expoted=True or not set at all, it's allows externa
 !!!ONLY IF sensitive data was stored/read externally!!!
 ```
 ```
+
+------------------------------------------------------------------------------------------------------------------------
+
+# Certificate
+
 
 ------------------------------------------------------------------------------------------------------------------------
 # BroadcastReceiver
