@@ -1,33 +1,15 @@
 - [Manifest](#Mainfest)
-  - [Debug Mode](#Debug)
-  - [Java Debugger](#jdp)
-  - [Backup](#Backup)
-  - [External Storage](#External_Storage)
-  - [Permissions](#Permissions)
+
 - [Broadcast Receiver](#BroadcastReceiver)
-  - [Broadcast Receiver Discription](#Broadcast_receiver_description)
-  - [Exported Broadcast Receiver](#Exported_broadcast_receiver)
-    - [Broadcast Receiver AndroidManifest declaration](#BR_AndroidManifest.xml)
-    - [Broadcast Receiver method code implementation](#BR_method_code)
-    - [ADB Broadcast Receiver exploitation](#adb_BR_exploitaion)
+
 - [Activity](#Activity)
-  - []()
-  - []()
-  - [Exported Activity Bypassing](#Exported_activity_bypassing)
-    - [Manifset](#Manifset)
+
 - [Intents](#Intents)
-  - [Intent Sniffing](#Intent_sniffing)
-    - [Intent AndroidManifest declaration](#Intent_AndroidManifest.xml)
-    - [Intent method code implementation](#Intent_implementation)
-    - [Create intent exploitation application](#Create_intent_exploitation_app)
+
 - [Content Provider](#Content_provider)
-  - [Content Provider Discription](#Content_Provider_Discription)
-  - [Exported Content Provider](#Exported_content_provider)
-    - [Content Provider AndroidManifest declaration](#CP_AndroidManifest.xml)
-    - [Content Provider method code implementation](#CP_method_code)
-    - [ADB Content Provider exploitation](#adb_CP_exploitaion)
+
 - [Insecure Logging](#Insecure_Logging)
-  - [logcat](#logcat)
+
 
 # Manifest
 
@@ -40,6 +22,32 @@ If an Application is marked as debuggable then an attacker can access the applic
 ### jdp
 
 ## Backup
+If backup flag is set to true, it allows an attacker to take the backup of the application data via adb even if the device is not rooted. 
+```
+adb backup -apk app_name
+
+dd if=backup.ab bs=1 skip=24 | openssl zlib -d > backup.tar
+tar xvf backup.tar
+```
+
+## Exported
+If android have flag android:expoted=True or not set at all, it's allows external app to access data
+```
+```
+
+## ProtectionLevel
+```
+```
+
+## Over-privileged
+```
+```
+
+## WRITE_EXTERNAL_STORAGE/READ_EXTERNAL_STORAGE
+!!!ONLY IF sensitive data was stored/read externally!!!
+```
+```
+
 ------------------------------------------------------------------------------------------------------------------------
 # BroadcastReceiver
 
